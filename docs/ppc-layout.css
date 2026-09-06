@@ -1,0 +1,28 @@
+.has-page-slider { --page-slider-height: 44px; }
+.page-workspace-rail { position: absolute; top: var(--brand-header-height); left: 0; right: 0; height: var(--page-slider-height); z-index: 30; box-sizing: border-box; }
+.page-workspace-rail button { cursor: pointer; touch-action: manipulation; color: #ffffff; background: #000000; }
+.has-page-slider .module-workspace { top: calc(var(--brand-header-height) + var(--page-slider-height)); }
+.has-page-slider .sheet-viewport { top: calc(var(--brand-header-height) + var(--page-slider-height)); }
+.module-workspace.is-ppc { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.ppc-control-panel { flex: 0 1 auto; min-height: 0; max-height: 48%; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-color: #ffffff #000000; background: #000000; color: #ffffff; border-bottom: 1px solid #ffffff; padding-top: 8px; font: 700 12px/1.25 Arial, Helvetica, sans-serif; }
+.ppc-control-panel[hidden], .targets-controls[hidden] { display: none; }
+.ppc-general-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 0 12px 10px; }
+.ppc-general-controls .workspace-choice-group { flex: 1 1 auto; min-width: max-content; margin: 0; }
+.ppc-general-controls .workspace-choice-group legend { padding-bottom: 6px; text-align: left; font-size: 10px; }
+.ppc-general-controls .workspace-choice-list { justify-content: flex-start; flex-wrap: nowrap; gap: 4px; }
+.ppc-control-panel button { background: #000000; color: #ffffff; border: 1px solid #ffffff; border-radius: 0; font: inherit; cursor: pointer; touch-action: manipulation; min-height: 32px; padding: 6px 10px; }
+.ppc-control-panel button[aria-pressed="true"] { color: #000000; background: #ffffff; }
+.ppc-control-panel .workspace-choice { font-size: 9px; padding-inline: 6px; }
+.ppc-control-panel button:focus-visible, .ppc-control-panel input:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+.ppc-content { display: flex; flex-direction: column; flex: 1 1 0; min-height: 0; min-width: 0; overflow: hidden; }
+.ppc-content .targets-workspace { flex: 1 1 0; }
+.ppc-content > .module-heading, .ppc-content > .module-summary, .ppc-content > .module-notice { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.ppc-content > .module-table-scroll { flex: 1 1 auto; min-height: 0; }
+.ppc-content .module-table th { position: sticky; top: 0; background: #000000; }
+@media (max-width: 899px) {
+  .has-page-slider .sheet-viewport { top: auto; margin-top: var(--page-slider-height); }
+  .ppc-control-panel { font-size: 11px; }
+  .ppc-control-panel .targets-kind button { font-size: 10px; padding-inline: 7px; }
+  .ppc-control-panel .targets-periods button { min-height: 30px; padding: 5px 2px; font-size: 10px; }
+  .ppc-control-panel .targets-expansion button { min-height: 30px; padding: 5px 6px; font-size: 9px; }
+}
